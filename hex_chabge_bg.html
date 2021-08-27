@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+       *{
+           padding: 0;
+           margin: 0;
+           box-sizing: border-box;
+       }
+       body{
+        font-size: 15px;
+        font-family: cursive;
+        background-color:#f1f5f1 ;
+        color:black;
+        line-height: 24px;
+      
+       }
+       h1{
+        font-family: cursive;
+           letter-spacing: 0.5px;
+           line-height: 32px;
+           font-size: 32px;
+         
+         margin-top:100px;
+     
+       }
+       @media screen and (min-width:800px){
+          h1{
+               font-size: 25px;
+               line-height: 16px;
+           }
+           body{
+               font-size: 16px;
+           
+           }
+       }
+       button{
+           border: none;
+           outline: none;
+           background-color: antiquewhite;
+           font-size: 27px;
+           cursor: pointer;
+           padding: 25px;
+           border-radius: 30px;
+           margin-top:100px;
+       }
+       
+       .container{
+           text-align: center;
+       }
+       .container h2{
+           background:#222;
+           color: #fff;
+           padding:32px;
+           border-radius: 8px;
+           margin-bottom:40px;
+           margin-top: 40px;
+
+       }
+      
+
+   </style>
+
+    <title>background colour change</title>
+</head>
+<body>
+  <main>
+      <div class="container">
+<h1>Change bg color:<sapn class="color">#F1F58</sapn></h1>
+<button class="button" id="btn">Click me</button>
+      </div> 
+
+  </main>
+   <script>
+      const hex =[0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"];
+      const button = document.getElementById("btn");
+      const color = document.querySelector(".color");   //returns the first element that matches a specified CSS selector in the document.
+
+      btn.addEventListener("click",function(){
+          let hexColor="#";
+          for(let i=0; i<6; i++){
+               hexColor +=hex[getRandomNumber()];
+          }
+          color.textContent=hexColor;
+          document.body.style.backgroundColor = hexColor;
+      });
+      function getRandomNumber(){
+          return Math.floor(Math.random() * hex.length);
+      }
+   </script>
+</body>
+</html>
